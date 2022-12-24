@@ -1,0 +1,8 @@
+/venv
+*.zip
+/cho-vay.vn
+/finloo.ph
+/moneygator.io
+__pycache__
+migrations
+db.sqlite3
