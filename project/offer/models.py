@@ -1,6 +1,5 @@
 from django.db import models
-from web.models import Web
-from common.models import UUIDModel, TimeStampedModel
+from common.models import *
 
 
 class Offer(UUIDModel, TimeStampedModel):
@@ -12,7 +11,10 @@ class Offer(UUIDModel, TimeStampedModel):
     minimum_term = models.PositiveIntegerField(verbose_name='Минимальный срок')
     maximum_term = models.PositiveIntegerField(verbose_name='Максимальный срок')
 
-    web = models.ForeignKey(verbose_name='Веб', to=Web, null=True, on_delete=models.CASCADE)
+    class Meta:
+        verbose_name = 'Оффер'
+        verbose_name_plural = 'Офферы'
+
 
     def __str__(self) -> str:
         return self.name
