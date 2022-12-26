@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/media/{{ template_styles }}"/>
+    {{ head | safe }}
+  </head>
+
+  <body class="module-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB843Q8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <header class="header-module" style="padding-bottom:0px;"> 
+      <div class="top-line" style="background-color:#AAAAAA;">
+        <div class="container">
+          <div class="row header-module__row">
+            <div class="logo"><a href="https://cho-vay.vn/new/index.html"><img src="img/logoh.png" alt style="max-height:30px;"></a></div>
+            <ul class="top-line__nav">
+              <!--<li><a class="js-modal" href="javascript;" data-mfp-src="#popup-more">О проекте</a></li>-->
+            </ul>
+            <div class="search-but js-search">
+              <svg class="icon icon-search ">
+                <use xlink:href="images/sprites.svg#search"></use>
+              </svg>
+            </div>
+            <div class="top-line-search" style="display: none;">
+              <input class="top-line-search__input" type="text" placeholder="Поиск">
+              <button class="top-line-search__button" type="submit">
+                <svg class="icon icon-search ">
+                  <use xlink:href="images/sprites.svg#search"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="menu-burger js-menu"><span class="lines"></span></div>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    <div class="module">
+      <div class="container">
+
+        
+        <div class="loans" id="loans">
+          <div class="loans-head" style="display:none;">
+            <div class="row">
+              <div class="col-lg-6">
+                <h2 class="loans__title title">Giới thiệu mô tả các hình thức cho vay</h2>
+                <div class="loans__money mob"><img src="new/images/loans.png" alt></div>
+                <div class="loans__text"><p>Trong mục n&agrave;y chứa danh s&aacute;ch c&aacute;c c&ocirc;ng ty t&agrave;i ch&iacute;nh cung cấp c&aacute;c khoản vay v&agrave;o thẻ. Ở đ&acirc;y ch&uacute;ng t&ocirc;i đ&atilde; thu thập cho bạn c&aacute;c tổ chức tin cậy nhất, họ c&oacute; kinh nghiệm l&agrave;m việc với tất cả những người đi vay v&agrave; duyệt đơn cho vay gần như trong 100% trường hợp. Tiền sẽ v&agrave;o thẻ của bạn trong thời gian ngắn nhất. Để l&agrave;m quen chi tiết hơn với c&aacute;c điều khoản cho vay, h&atilde;y click v&agrave;o n&uacute;t &ldquo;Xem chi tiết&rdquo;.</p></div><!--<a class="but but_purple" target=_blank href="Ссылка кнопки"><span>Текст кнопки</span></a>-->
+              </div>
+              <div class="col-lg-6">
+                <div class="loans__money pc"><img src="new/images/loans.png" alt></div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="tabs js-tabs"><a name="filter_buttons"></a>
+                        <ul class="loans__tags js-tabs-list" style="display:none;">
+              <li>
+                <a class="loans__tag" id="offers_button0" href="offers/index.html#filter_buttons">All</a>
+              </li>
+              <li>
+                <label class="loans__tag offers_buttons" id="offers_button6"><a href='offers/card.html#filter_buttons'>Vay tiền bằng thẻ ngân hàng </a></label>
+              </li>
+              <li>
+                <label class="loans__tag offers_buttons" id="offers_button10"><a href='offers/nowaiver.html#filter_buttons'>Vay tín dụng không bị từ chối</a></label>
+              </li>
+              <li>
+                <label class="loans__tag offers_buttons" id="offers_button12"><a href='offers/0percent.html#filter_buttons'>Lãi suất 0% cho lần vay đầu tiên </a></label>
+              </li>
+              <li>
+                <label class="loans__tag offers_buttons" id="offers_button16"><a href='offers/5min.html#filter_buttons'>Vay tiền chỉ với 5 phút</a></label>
+              </li>
+		
+
+            </ul>                        <div class="loans__advice"><a name="list"></a>Yêu cầu được gửi hơn 2 lần sẽ đảm bảo việc nhận số tiền cần thiết</div>
+            <div class="tab" style="display: block;">
+              <div class="loans-widgets">
+
+
+<script language="javascript">
+  function setCookie(name, value, options) {
+    options = options || {};
+    var expires = options.expires;
+
+    if (typeof expires == "number" && expires) {
+      var d = new Date();
+      d.setTime(d.getTime() + expires * 1000);
+      expires = options.expires = d;
+    }
+    if (expires && expires.toUTCString) {
+      options.expires = expires.toUTCString();
+    }
+
+    value = encodeURIComponent(value);
+
+    var updatedCookie = name + "=" + value;
+
+    for (var propName in options) {
+      updatedCookie += "; " + propName;
+      var propValue = options[propName];
+      if (propValue !== true) {
+        updatedCookie += "=" + propValue;
+      }
+    }
+
+    document.cookie = updatedCookie;
+  }
+  setCookie("showcase_counter", "88785", 3600)
+</script>
+
+{% for offer in offers %}
+
+    <div class="loans-widget offers_all offers_ ">
+      <div class="loans-item">
+        <div class="loans-item__logo">
+          <a href="new/index.html#">
+            <img src="img/offers/offers-130.jpg@1629731887" alt>
+          </a>
+          <div class="loans-item__approval">
+            {{ offer.minimum_term }} ngày {{ offer.rate }} lãi
+          </div>
+        </div>
+        <div class="loans-item__content">
+          <div class="loans-item__info">
+            <div class="loans-item__table">
+              <div class="loans-item__col">
+                <div class="loans-item__title">Số tiền</div>
+                <div class="loans-item__value">{{ offer.sum }} triệu đồng</div>
+              </div>
+              <div class="loans-item__col">
+                <div class="loans-item__title">Thời hạn cho vay</div>
+                <div class="loans-item__value">{{ offer.maximum_term }} tháng</div>
+              </div>
+              <div class="loans-item__col">
+                <div class="loans-item__title">Lãi suất</div>
+                <div class="loans-item__value">Từ {{ offer.get_interest_rate }}%</div>
+              </div>
+            </div>
+            <div class="loans-item__links">
+              <a class="but but_purple" href="https://qtuzld.com/click-GQPO6FWC-NKHQCNC4?bt=25&tl=1&" target="_blank">
+                <span>Đăng ký vay</span>
+              </a>
+            </div>
+          </div>
+          <ul class="loans-item__withdrawal">
+          </ul>
+        </div>
+      </div>
+      <div class="loans-hint">
+        <ul class="loans-hint__list">
+          <li><b>Doctor Dong CPL</b></li>
+          <li>Tuổi: 22 - 60 tuổi</li>
+          <li>
+            <b>Thông tin cần cung cấp:</b>
+            <br/> - Thông tin cá nhân
+            <br/> - Chứng minh Nhân dân/ Thẻ căn cước công dân.
+            <br/> - Tài khoản ngân hàng</li>
+          </ul>
+        </div>
+    </div>
+
+
+
+<!--
+<a class="offer__cover bem_offer  offers_all offers_ " target="_blank"  data-redirect-link="https://qtuzld.com/click-GQPO6FWC-NKHQCNC4?bt=25&tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://qtuzld.com/click-GQPO6FWC-NKHQCNC4?bt=25&tl=1&">
+<span class="bem_offer__note">7 ngày 0 lãi</span>        <div class="bem_offer__image">
+        <img src="/img/offers/offers-130.jpg?918724309" alt="" width="195">
+    </div>
+
+
+
+    <div class="bem_offer__info">
+12 tháng<br><b>Thông tin cần cung cấp:</b><br/> - Thông tin cá nhân<br/> - Chứng minh Nhân dân/ Thẻ căn cước công dân.<br/> - Tài khoản ngân hàng</div>
+    <div class="bem_offer__text">
+        <div class="bem_param bem_param_type_coin">500K - 10 triệu đồng</div>        <div class="bem_param bem_param_type_percent">Từ 0 %</div>        <div class="bem_param bem_param_type_age">Tuổi: 22 - 60 tuổi<br></div>    </div>
+    <div class="bem_offer__get">
+        <div class="button" style="/*Перебивает Hover background-color: #00B56A !important;*/">
+            Заполнить&nbsp;заявку
+        </div>
+    </div>
+</a>
+-->
+
+{% endfor %}
+                        
+          </div>
+        </div>  
+      </div>
+    </div>
+    <div class="modal mfp-with-anim mfp-3d-unfold mfp-hide" id="modal-add">
+      <div class="modal__widget">
+        <div class="modal__close js-modalClose">
+          <svg class="icon icon-close ">
+            <use xlink:href="images/sprites.svg#close"></use>
+          </svg>
+        </div>
+        <div class="modal__content">
+          <form class="reviews-form js-validate">
+            <div class="tit">Добавление информации</div>
+            <div class="hint">Благодарим Вас за Ваше время</div>
+            <div class="reviews__textarea">
+              <textarea placeholder="Сообщение" required name="add_comment"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="reviews__input">
+                  <input class="js-upload" type="file" name="add_file">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="reviews__but">
+                  <button class="but but_purple" type="submit"><span>Отправить</span></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal__sub">
+          <div class="modal__subtitle">Правила обновления информации:</div>
+          <ul class="modal__sublist">
+            <li>минимальная длина короткой стороны изображения 340 пикселей</li>
+            <li>файлы только в JPG-формате</li>
+            <li>на фото не должно быть рамок и черных полос по краям</li>
+            <li>не рекомендуем добавлять фотографии с логотипами и прочими надписями (кроме постеров) </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal mfp-with-anim mfp-3d-unfold mfp-hide" id="modal-error">
+      <div class="modal__widget">
+        <div class="modal__close js-modalClose">
+          <svg class="icon icon-close ">
+            <use xlink:href="images/sprites.svg#close"></use>
+          </svg>
+        </div>
+        <div class="modal__content">
+          <form class="reviews-form js-validate">
+            <div class="tit">Сообщение об ошибке</div>
+            <div class="hint">Благодарим Вас за Ваше время</div>
+            <div class="reviews__textarea">
+              <textarea placeholder="Сообщение" required name="add_comment"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="reviews__input">
+                  <input class="js-upload" type="file" name="add_file">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="reviews__but">
+                  <button class="but but_purple" type="submit"><span>Отправить</span></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2321">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">Doctor Dong</div><div class="popup__description">
+</div>
+        <div class="popup__text"><br/><b>Đối tượng được hỗ trợ vay:</b> Dành cho những ai cần vay online tiền mặt giải ngân trong ngày không cần chờ đợi.<br/>
+<b>Các điều kiện cho vay:</b><br/>
+- Tuổi: 22 - 60 tuổi<br/>
+- Thu nhập trung bình hàng tháng từ 2 triệu đồng<br/>
+<b>Thông tin cần cung cấp:</b><br/>
+- Thông tin cá nhân<br/>
+- Chứng minh Nhân dân/ Thẻ căn cước công dân.<br/>
+- Tài khoản ngân hàng<br/>
+<b>Thời gian xử lý khoản vay:</b><br/>
+Có kết quả xét duyệt trong vòng 15 phút và nếu thông tin thỏa điều kiện bạn sẽ được giải ngân tự động qua thẻ ATM ngân hàng trong vòng 5 phút.<br/>
+<b>Thời hạn vay tối đa:</b><br/>
+Kỳ hạn linh hoạt 10/20/30 ngày hoặc hơn tùy chọn khi đăng ký vay theo nhu cầu khoản tiền và kỳ hạn.<br/>
+Tiền vay tối đa :<br/>
+10 triệu đồng theo mặc định. Cần khoản vay lớn hơn? Bạn sẽ được tăng hạn mức ở lần vay tiếp theo và khi thanh toán đúng thời hạn.<br/>
+<b>Ưu điểm:</b><br/>
+- Ưu đãi lần đầu vay lãi suất 0 đồng  ( 0% lãi suất cho khoản vay đầu tiên)<br/>
+- Nhận kết quả duyệt nhanh trong vòng 15 phút sau khi đăng ký<br/>
+- Chỉ cần CMND và thẻ ngân hàng<br/>
+- Nhiều hình thức thanh toán linh hoạt<br/>
+- Vay từ tổ chức có pháp nhân rõ ràng không sợ lừa đảo<br/>
+- Hỗ trợ tăng dần hạn mức sau mỗi lần vay.<br/>
+<b>Thông tin pháp nhân</b><br/>
+Công ty TNHH MTV Tư vấn Tài Chính LGC<br/>
+Địa chỉ: Tòa nhà 27B Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh<br/>
+Giấy CN ĐKDN số 1201503076 <br/>
+Cần thêm thông tin chi tiết bạn xem tại link hoặc tham khảo thêm nhiều bên cho vay khác tại cho-vay.vn nhé!</div><a class="but but_purple" href="https://qtuzld.com/click-GQPO6FWC-NKHQCNC4?bt=25&tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://qtuzld.com/click-GQPO6FWC-NKHQCNC4?bt=25&tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — 500K - 10 triệu đồng</li><li>12 tháng</li><li>Từ 0 %</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2336">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">VayVND</div><div class="popup__description">
+</div>
+        <div class="popup__text"><br/><b>Đối tượng được hỗ trợ vay:</b> Dành cho những ai cần vay nhanh online tiền mặt giải ngân trong ngày không cần chờ đợi.<br/>
+<br/>
+<b>Các điều kiện cho vay:</b><br/>
+- Tuổi: 22 - 60 tuổi, sinh sống tại Việt Nam<br/>
+- Có thu nhập hằng tháng<br/>
+<br/>
+<b>Thông tin cần cung cấp:</b><br/>
+- Thông tin cá nhân<br/>
+- Chứng minh Nhân dân/ Thẻ căn cước công dân.<br/>
+- Tài khoản ngân hàng<br/>
+<br/>
+<b>Thời gian xử lý khoản vay:</b><br/>
+Có kết quả xét duyệt trong vòng 15 phút và nếu thông tin thỏa điều kiện bạn sẽ được giải ngân tự động qua thẻ ATM ngân hàng trong vòng 5 phút.<br/>
+<br/>
+<b>Thời hạn vay tối đa:</b><br/>
+ Kỳ hạn linh hoạt 10-30 ngày<br/>
+<br/>
+<b>Tiền vay tối đa:</b><br/>
+10 triệu đồng<br/>
+<br/>
+<b>Ưu điểm:</b><br/>
+- Nhận kết quả duyệt nhanh và nhận tiền ngay trong ngày<br/>
+- Chỉ cần CMND  và thẻ ngân hàng còn thời hạn, không cần thủ tục phức tạp<br/>
+<br/>
+<br/>
+<b>Thông tin pháp nhân</b><br/>
+Công ty TNHH CAPITAL SOLUTION<br/>
+Địa chỉ: Tầng 12 Tòa Nhà Anh Minh Số 56 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh, Việt Nam<br/>
+Giấy CN ĐKDN số 0315725722<br/>
+<br/>
+Cần thêm thông tin chi tiết bạn xem tại link hoặc tham khảo thêm nhiều bên cho vay khác tại cho-vay.vn nhé!
+</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-3mpLq-mVGk55-yDePX-e98f0d3d?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-3mpLq-mVGk55-yDePX-e98f0d3d?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — Từ 1tr - 15 triệu vnđ</li><li>Lên đến 180 ngày</li><li>Từ 12%</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2341">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">Senmo</div><div class="popup__description">
+</div>
+        <div class="popup__text"><br/><b>Đối tượng hỗ trợ cho vay:</b> Dành cho những ai cần vay nhanh online tiền mặt giải ngân trong ngày không cần chờ đợi, không cần thế chấp<br/>
+<br/>
+<b>Các điều kiện cho vay:</b><br/>
+- Tuổi: 21 - 60 tuổi, sinh sống tại Việt Nam<br/>
+- Có thu nhập hằng tháng<br/>
+<br/>
+<b>Thông tin cần cung cấp:</b><br/>
+- Thông tin cá nhân<br/>
+- Chứng minh Nhân dân/ Thẻ căn cước công dân.<br/>
+- Tài khoản ngân hàng<br/>
+<br/>
+<b>Thời gian xử lý khoản vay:</b><br/>
+Có kết quả xét duyệt trong vòng 15 phút và nếu thông tin thỏa điều kiện bạn sẽ được giải ngân tự động qua thẻ ATM ngân hàng trong vòng 5 phút.<br/>
+<br/>
+<b>Thời hạn vay tối đa:</b><br/>
+ Kỳ hạn linh hoạt 300  ngày<br/>
+<br/>
+<b>Tiền vay tối đa:</b><br/>
+10 triệu đồng<br/>
+<br/>
+<b>Ưu điểm:</b><br/>
+- Ưu đãi vay lãi suất 0 đồng cho khoản vay đầu tiên lên đến 4 triệu đồng<br/>
+- Nhiều gói tùy chọn kỳ hạn vay dài linh hoạt<br/>
+- Nhận kết quả duyệt nhanh và nhận tiền ngay trong ngày<br/>
+- Chỉ cần CMND  và thẻ ngân hàng còn thời hạn, không cần thủ tục phức tạp<br/>
+- Có chương trình khách hàng thân thiết và hỗ trợ Hoàn tiền<br/>
+- Vay từ công ty có pháp nhân rõ ràng không sợ lừa đảo<br/>
+- Duyệt tự động 24/7 hoàn toàn online<br/>
+<br/>
+<b>Thông tin pháp nhân</b><br/>
+CÔNG TY TNHH GOFINGO VIỆT NAM<br/>
+Địa chỉ: Số 102 Nguyễn Xí, Phường 26, Quận Bình Thạnh, Thành phố Hồ Chí Minh<br/>
+Giấy phép kinh doanh số 0315529414<br/>
+<br/>
+Cần thêm thông tin chi tiết bạn xem tại link hoặc tham khảo thêm nhiều bên cho vay khác tại cho-vay.vn nhé!
+</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-BJMX6-mVGk55-5ypzJ-2445624d?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-BJMX6-mVGk55-5ypzJ-2445624d?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — từ 100k - 4 triệu vnđ</li><li>Lên đến 1 năm </li><li>Từ 0 %</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2337">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">Tiền Ơi</div><div class="popup__description">
+</div>
+        <div class="popup__text"><br/><b>GỌI TIỀN ƠI CÓ TIỀN NGAY TRONG NGÀY!</b><br/>
+Đối tượnghỗ trợ cho vay: Dành cho những ai cần vay nhanh online tiền mặt giải ngân trong ngày không cần chờ đợi, không cần thế chấp<br/>
+<br/>
+<b>Các điều kiện cho vay:</b><br/>
+- Tuổi: 21-70 tuổi trở lên, sinh sống tại Việt Nam (trừ khu vực Hải Phòng, đảo và quần đảo)<br/>
+- Có thu nhập ổn định<br/>
+<br/>
+<b>Thông tin cần cung cấp:</b><br/>
+- Thông tin cá nhân<br/>
+- Chứng minh Nhân dân/ Thẻ căn cước công dân.<br/>
+- Tài khoản ngân hàng<br/>
+<br/>
+<b>Thời gian xử lý khoản vay:</b><br/>
+Có kết quả xét duyệt trong vòng 15 phút và nếu thông tin thỏa điều kiện bạn sẽ được giải ngân tự động qua thẻ ATM ngân hàng trong vòng 5 phút.<br/>
+<br/>
+ <b>Thời hạn vay tối đa:</b><br/>
+ Kỳ hạn linh hoạt lên đến 180 ngày<br/>
+<br/>
+<b>Tiền vay tối đa:</b><br/>
+500K - 10 triệu đồng. Hạn mức số tiền được vay có thể tăng cho những lần vay sau.<br/>
+<br/>
+<b>Ưu điểm:</b><br/>
+- Ưu đãi lãi suất 0.01% cho lần vay đầu tiên.<br/>
+- Nhận kết quả duyệt nhanh và nhận tiền ngay trong 15 phút<br/>
+- Chỉ cần CMND và thẻ ngân hàng còn thời hạn, không cần thủ tục phức tạp<br/>
+- Gia hạn khoản vay bất cứ lúc nào<br/>
+- Vay tiền nhanh từ tổ chức tài chính minh bạch<br/>
+- Độ tuổi chấp nhận cho vay rộng hơn một số tổ chức khác<br/>
+<br/>
+<b>Thông tin pháp nhân</b><br/>
+CÔNG TY TNHH BUSINESS MASTER<br/>
+Địa chỉ: 195 Điện Biên Phủ, Phường 15, Quận Bình Thạnh, Hồ Chí Minh, Vietnam.<br/>
+Giấy CN ĐKDN số 0316241530 do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 22/04/2020.<br/>
+<br/>
+Cần thêm thông tin chi tiết bạn xem tại link hoặc tham khảo thêm nhiều bên cho vay khác tại cho-vay.vn nhé!</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-AMOR8-mVGk55-GqXNM-e7037129?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-AMOR8-mVGk55-GqXNM-e7037129?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — lên đến 10 triệu vnđ</li><li>Lên đến 6 tháng </li><li>Từ 0.01%</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2342">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">ATM online</div><div class="popup__description">
+</div>
+        <div class="popup__text"><br/><b>Đối tượng được hỗ trợ vay:</b> Dành cho những ai cần vay nhanh online tiền mặt giải ngân trong ngày không cần chờ đợi, không cần thế chấp<br/>
+<br/>
+<b>Các điều kiện cho vay:</b><br/>
+- Tuổi: 22 - 60 tuổi, sinh sống tại Việt Nam<br/>
+- Có thu nhập hằng tháng<br/>
+<br/>
+<b>Thông tin cần cung cấp:</b><br/>
+- Thông tin cá nhân<br/>
+- Chứng minh Nhân dân/ Thẻ căn cước công dân.<br/>
+- Tài khoản ngân hàng<br/>
+<br/>
+<b>Thời gian xử lý khoản vay:</b><br/>
+Có kết quả xét duyệt trong vòng 15 phút và nếu thông tin thỏa điều kiện bạn sẽ được giải ngân tự động qua thẻ ATM ngân hàng trong vòng 1 giờ <br/>
+<br/>
+<b>Thời hạn vay tối đa:</b><br/>
+ Kỳ hạn linh hoạt lên đến 183 ngày<br/>
+<br/>
+<b>Tiền vay tối đa:</b><br/>
+12 triệu đồng<br/>
+<br/>
+<b>Ưu điểm:</b><br/>
+Miễn lãi suất hoàn toàn ( 0% lãi suất) cho khoản vay đầu tiên tất toán trong 14 ngày.<br/>
+- Hệ thống thanh toán miễn phí đa dạng online và offline: Internet Banking / MOMOS/ ZaloPay / ViettelPay hoặc có thể chọn thanh toán tại các điểm giao dịch tại iêu thị/Cửa hàng tiện lợi <br/>
+- Chỉ cần CMND  và thẻ ngân hàng còn thời hạn, không cần thủ tục phức tạp<br/>
+- Nhân viên hỗ trợ nhiệt tình khi cần hướng dẫn<br/>
+- Vay từ tổ chức tài chính có pháp nhân rõ ràng không sợ lừa đảo<br/>
+<br/>
+<b>Thông tin pháp nhân</b><br/>
+Công ty TNHH TMDV TM 24H<br/>
+Địa chỉ : Tầng 24, Tòa nhà Pearl Plaza, số 561A Điện Biên Phủ,<br/>
+Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh<br/>
+Giấy CN ĐKDN số 0314696236<br/>
+<br/>
+Cần thêm thông tin chi tiết bạn xem tại link hoặc tham khảo thêm nhiều bên cho vay khác tại cho-vay.vn nhé!
+</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-BNz8J-mVGk55-zQYrG-c5751c52?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-BNz8J-mVGk55-zQYrG-c5751c52?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — lên đến 6 triệu vnđ</li><li>Lên đến 6 tháng </li><li>Từ 0%</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2343">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">ONCREDIT</div><div class="popup__description">
+</div>
+        <div class="popup__text"><br/><b>VAY TIỀN NHANH ONLINE VỚI ONCREDIT</b><br/>
+Đối tượng hỗ trợ cho vay: Dành cho những ai cần vay nhanh qua ứng dụng từ công ty tài chính có địa chỉ rõ ràng, minh bạch lãi suất, đa dạng phương thức thanh toán và thủ tục giải ngân trong ngày.<br/>
+<br/>
+<b>Các điều kiện cho vay:</b><br/>
+- Tuổi: 18-60 tuổi<br/>
+- Sống và làm việc tại Việt Nam<br/>
+- Có việc làm, thu nhập ổn định<br/>
+<br/>
+<b>Thông tin cần cung cấp:</b><br/>
+- Tải ứng dụng bằng link trên cho-vay và điền số Chứng minh nhân dân / số Thẻ căn cước<br/>
+ - Hoàn tất thông tin đăng ký duy nhất chỉ trên ứng dụng<br/>
+<b>Thời gian xử lý khoản vay:</b><br/>
+Có kết quả xét duyệt trong ngày sau khi hoàn tất đăng ký và nếu thông tin thỏa điều kiện bạn sẽ nhận được cuộc gọi thông báo, trong đó có chỉ dẫn để bạn truy cập vào tài khoản của bạn trên Ứng dụng OnCredit để nhận tiền sau khi hoàn tất thủ tục ký hợp đồng, tiền sẽ được giải ngân trong 30 phút và tối đa trong vòng 24 giờ. <br/>
+<b>Thời hạn vay tối đa:</b><br/>
+Từ 91 đến 182 ngày<br/>
+Lãi suất vay từ 14.2% đến 14.6%. Có cơ hội ưu đãi lãi suất cho khoản vay đầu tiên cập nhật theo chương trình khuyến mãi tùy thời điểm.<br/>
+Bạn sẽ thấy tổng số tiền hoàn trả của khoản vay của bạn tại Công cụ dự toán khoản vay trên Ứng dụng Oncredit. Ngoài phí dịch vụ đi kèm khoản vay được tính dựa theo thời hạn vay và lãi suất vay, sẽ không tính thêm khoản phí nào khác nếu thanh toán đúng hạn.<br/>
+<br/>
+<b>Tiền vay tối đa:</b><br/>
+Từ 500K – 15 triệu tùy chọn từng gói vay trên ứng dụng.<br/>
+<b>Ưu điểm:</b><br/>
+- Có cơ hội nhận khoản vay đầu tiên 0% lãi và phí với đối tác cho vay của OnCredit (chương trình cập nhật tùy thời điểm)<br/>
+- Thanh toán đúng hạn càng nhiều khoản vay để nhận càng nhiều tiền thưởng về tài khoản.<br/>
+- Ưu đãi khách hàng thân thiết: Cơ hội nhận được mã giảm giá lên đến 50% cho hồ sơ vay lại<br/>
+- Ưu đãi hoàn tiền: Hoàn trả lên đến 15% lãi và phí cho các khách hàng tất toán khoản vay trước hạn.<br/>
+- Ưu đãi dành riêng cho KH</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-bKp9G-mVGk55-Y2aDo-ebdeeefe?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-bKp9G-mVGk55-Y2aDo-ebdeeefe?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — từ 500k - 4 triệu vnđ</li><li>Lên đến 6 tháng</li><li>Từ 14,2 %</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2338">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">Tamo</div><div class="popup__description">
+</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-AeRzk-mVGk55-2x6np-4c398437?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-AeRzk-mVGk55-2x6np-4c398437?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — Từ 1tr - 20 triệu vnđ</li><li>Lên đến 6 tháng </li><li>Lên đến 20% mỗi năm</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2339">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">Findo</div><div class="popup__description">
+</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-AGmnw-mVGk55-8VlRL-82bb3ef8?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-AGmnw-mVGk55-8VlRL-82bb3ef8?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — Lên đến 17 triệu vnđ</li><li>Lên đến 180 ngày </li><li>Từ 12 đến 20% một năm</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more2340">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container"><div class="popup__title title">Tima</div><div class="popup__description">
+</div><a class="but but_purple" href="https://go.cityclub.finance/v2/click-AMwdd-mVGk55-qZkJP-dc31f883?tl=1&" onclick="ym('57376597', 'reachGoal', 'JUMP');ga('send', 'event', 'Offer_click', 'jump', 'MYORDER');return true;" target="_blank" href="https://go.cityclub.finance/v2/click-AMwdd-mVGk55-qZkJP-dc31f883?tl=1&" target="_blank"><span>Đăng ký vay</span></a><!--<div class="popup__bottom">
+          <ul class="popup__sublist">
+<li>Số tiền — Lên đến 42 triệu vnđ</li><li>Lên đến 12 tháng </li><li>Lên đến 18% một năm</li>          </ul>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="popup mfp-with-anim mfp-3d-unfold mfp-hide" id="popup-more">
+      <div class="popup__logo"><img src="img/logoh.png" alt  style="max-height:30px;">
+        <!--<div class="popup__sign">Chi tiết</div>-->
+      </div>
+      <div class="popup__close js-modalClose">
+        <svg class="icon icon-close ">
+          <use xlink:href="images/sprites.svg#close"></use>
+        </svg>
+      </div>
+      <div class="popup__container">      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <!--<div class="footer__row">
+          <div class="footer__logo"><a href="/"></a></div>
+        </div>-->
+        <div class="footer__cookie"><p><strong>So s&aacute;nh vay tiền nhanh tại cho-vay.vn</strong> Trong cuộc sống đ&ocirc;i l&uacute;c ta cần tiền để giải quyết c&ocirc;ng việc, nếu kh&ocirc;ng sẽ mất cơ hội hoặc sẽ xẩy ra hậu quả đ&aacute;ng tiếc. Đến ng&acirc;n h&agrave;ng ư? Phải mất kh&ocirc;ng &iacute;t thời gian l&agrave;m hồ sơ, chờ xem x&eacute;t ph&ecirc; duyệt, nhiều l&uacute;c c&ograve;n phải chứng thực t&agrave;i sản thế chấp. Nhờ c&aacute;c dịch vụ cho vay phổ biến hiện nay &agrave;? V&acirc;ng, thủ tục c&oacute; đơn giản hơn, nhận được tiền nhanh hơn. Với sự ph&aacute;t triển của c&ocirc;ng nghệ th&ocirc;ng tin, vay tiền nhanh online l&agrave; c&ocirc;ng cụ đắc lực gi&uacute;p ta trong những ho&agrave;n cảnh đ&oacute;. <br />Dịch vụ cho-vay.vn sẽ lu&ocirc;n miễn ph&iacute;! <br /><br /><strong>Y&ecirc;u cầu đối với người vay</strong> Cư d&acirc;n thường trực ở Việt Nam ở độ tuổi từ 18 tuổi với bất kỳ lịch sử t&iacute;n dụng v&agrave; số điện thoại c&oacute; hiệu lực. <br /><br /><strong>C&aacute;ch thức hoạt động?</strong> Ho&agrave;n thiện hồ sơ vay t&iacute;n dụng chỉ trong 3 bước: <br />1) Chọn c&ocirc;ng ty tín dụng. <br />2) Chờ quyết định. <br />3) Nhận tiền tức thời. <br /><br /><strong>L&atilde;i suất h&agrave;ng năm (Annual Percentage Rate APR)</strong> L&atilde;i suất h&agrave;ng năm l&agrave; tổng chi ph&iacute; của khoản vay được thể hiện dưới dạng phần trăm. Việc t&iacute;nh l&atilde;i suất h&agrave;ng năm kh&ocirc;ng bao gồm c&aacute;c chi ph&iacute; li&ecirc;n quan đến việc kh&ocirc;ng thực hiện nghĩa vụ theo hợp đồng vay. L&atilde;i suất h&agrave;ng năm cho những khoản vay c&oacute; thể l&ecirc;n tới 60% mỗi năm. <br /><br /><strong>Khoản tiền phạt hoặc th&ocirc;ng tin ch&iacute;nh s&aacute;ch đổi mới</strong> Trong trường hợp nếu số tiền vay kh&ocirc;ng được thanh to&aacute;n trong khoảng thời gian quy định, b&ecirc;n cho vay c&oacute; thể y&ecirc;u cầu thanh to&aacute;n tiền phạt từ tổng số tiền thanh to&aacute;n qu&aacute; hạn cho mỗi ng&agrave;y trễ hạn thanh to&aacute;n. <br /><br /><strong>H&atilde;y vay c&oacute; tr&aacute;ch nhiệm</strong> H&atilde;y vay c&oacute; tr&aacute;ch nhiệm, đ&aacute;nh gi&aacute; cơ hội thanh to&aacute;n khoản vay của m&igrave;nh. Trước khi bạn vay, h&atilde;y đọc c&aacute;c điều khoản của hợp đồng vay, đảm bảo rằng bạn c&oacute; thể thực hiện ch&uacute;ng. <br /><br />Trang chủ của cho-vay.vn kh&ocirc;ng phải l&agrave; b&ecirc;n cho vay v&agrave; kh&ocirc;ng cho vay. Tất cả những b&ecirc;n cho vay được so s&aacute;nh đều c&oacute; giấy ph&eacute;p tổ chức t&iacute;n dụng.</p></div>
+        <div class="footer__copy">© 2022, cho-vay.vn</div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script language='javascript'>
+$(document).ready(function() {
+	});
+    </script>
+    <script src="new/js/vendor.js@v=1606254424134"></script>
+    <script src="new/js/main.js@v=1606254424134"></script>
+
+  </body>
+</html>

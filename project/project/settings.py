@@ -20,6 +20,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'drf_yasg',
 ]
 
 INSTALLED_APPS += [
@@ -41,7 +42,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "project.urls"
 
-TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
+TEMPLATE_DIR = os.path.join(BASE_DIR, "media/templates")
 
 TEMPLATES = [
     {
@@ -79,7 +80,10 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = "static/"
+STATICFILES_DIRS = ('./static/',)
+STATIC_ROOT ='/static/'
+STATIC_URL = "/static/"
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

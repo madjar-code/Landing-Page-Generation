@@ -1,12 +1,18 @@
 from django.shortcuts import render
 from web.models import Web
+from offer.models import Offer
 
 
 def get_landing_page(request, id):
     web = Web.objects.get(id=id)
-    context = {
-        'html_code': web.template.html_code,
-    }
-    print(web.template.html_code)
+    template = web.template
+    offers = web.offers.all()
+    print(template.template_styles)
 
-    return render(request, 'common.html', context)
+    context = {
+        'head': web.html_code,
+        'offers': offers,
+        'template_styles': template.template_styles
+    }
+
+    return render(request, template.get_file_name(), context)

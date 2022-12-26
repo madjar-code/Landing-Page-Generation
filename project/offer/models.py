@@ -11,6 +11,10 @@ class Offer(UUIDModel, TimeStampedModel):
     minimum_term = models.PositiveIntegerField(verbose_name='Минимальный срок')
     maximum_term = models.PositiveIntegerField(verbose_name='Максимальный срок')
 
+    def get_interest_rate(self) -> float:
+        result = self.rate * 100
+        return round(result, 1)
+
     class Meta:
         verbose_name = 'Оффер'
         verbose_name_plural = 'Офферы'

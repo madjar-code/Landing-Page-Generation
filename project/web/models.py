@@ -8,14 +8,15 @@ class Web(UUIDModel, TimeStampedModel):
     name = models.CharField(max_length=255)
     domain = models.CharField(max_length=255)
     character_code = models.CharField(max_length=255)
+
     html_code = models.TextField()
     url = models.URLField(max_length=255)
     ref_url = models.URLField(max_length=255)
+
     template = models.ForeignKey(
         to=Template, 
         on_delete=models.PROTECT,
         null=True)
-
     offers = models.ManyToManyField(
         verbose_name='Предложения',
         to=Offer, null=True)
