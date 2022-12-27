@@ -16,3 +16,7 @@ def get_landing_page(request, id):
     }
 
     return render(request, template.get_file_name(), context)
+
+
+def get_test_page(request):
+    return render(request, 'philippines.html')
