@@ -7,7 +7,8 @@ def get_landing_page(request, id):
     web = Web.objects.get(id=id)
     template = web.template
     offers = web.offers.all()
-    print(template.template_styles)
+
+    # print(f'\n\n\n{template.web}\n\n\n')
 
     context = {
         'head': web.html_code,
